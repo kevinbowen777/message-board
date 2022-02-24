@@ -6,10 +6,10 @@ message_board is a demonstration of simple Django functionality
 
 ---
 ## Features
- - TBD
+ - Admin user can post simple text posts
 
 ### Live Demo on Heroku: 
- - TBD
+ - [message_board live demo](https://limitless-plains-90973.herokuapp.com/)
 ### Docker Container Image:
 
  - TBD
