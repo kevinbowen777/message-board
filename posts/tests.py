@@ -31,3 +31,9 @@ class HomePageViewTest(TestCase):
         resp = self.client.get(reverse('home'))
         self.assertEqual(resp.status_code, 200)
         self.assertTemplateUsed(resp, 'home.html')
+
+
+class AdminPageTest(TestCase):
+    def test_admin_login_page_status_code(self):
+        resp = self.client.get('/admin/login/?next=/admin/')
+        self.assertEqual(resp.status_code, 200)
