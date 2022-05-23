@@ -5,8 +5,7 @@ message_board is a demonstration of simple Django functionality
 ### Installation
  - `git clone https://github.com/kevinbowen777/message_board.git`
  - `cd message_board`
- - `pipenv install`
- - `pipenv shell`
+ - `workon message_board` or `mkvirtualenv message_board`
  - `python manage.py runserver`
  - Open browser to http://127.0.0.1:8000
 
