@@ -5,8 +5,8 @@ message_board is a demonstration of simple Django functionality
 ### Installation
  - `git clone https://github.com/kevinbowen777/message_board.git`
  - `cd message_board`
- - `workon message_board` or `mkvirtualenv message_board`
- - `python manage.py runserver`
+ - `docker-compose up --build`
+ - `docker-compose exec web python manage.py migrate`
  - Open browser to http://127.0.0.1:8000
 
 ---
