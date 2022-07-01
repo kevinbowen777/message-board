@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.sites",
     # third-party apps
-    # "debug_toolbar",
+    "debug_toolbar",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
@@ -50,7 +50,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    # "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -147,4 +147,4 @@ MEDIA_ROOT = str(BASE_DIR.joinpath("media"))
 # hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
 # INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
 # The following is for use locally:
-# INTERNAL_IPS = ["127.0.0.1"]
+INTERNAL_IPS = ["127.0.0.1"]
