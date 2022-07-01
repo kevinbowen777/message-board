@@ -29,7 +29,7 @@ class HomePageViewTest(TestCase):
     def test_view_uses_correct_template(self):
         resp = self.client.get(reverse("home"))
         self.assertEqual(resp.status_code, 200)
-        self.assertTemplateUsed(resp, "home.html")
+        self.assertTemplateUsed(resp, "pages/home.html")
 
 
 class AdminPageTest(TestCase):
