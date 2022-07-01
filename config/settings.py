@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.github",
+    "crispy_forms",
     "django_extensions",
     # Local apps
     "accounts",
@@ -133,6 +134,9 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+#  django-crispy-forms
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 # django-debug-toolbar
 # Use the following in Docker only:
