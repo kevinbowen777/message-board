@@ -21,5 +21,8 @@ class PostModelTest(TestCase):
         # self.assertEqual(expected_object_name, "just a test")
         self.assertEqual(self.text, "just a test")
 
-    def test___str__(self):
+    def test_posts___str__(self):
         self.assertEqual(str(self.post), self.post.text)
+
+    def test_posts_get_absolute_url(self):
+        assert self.post.get_absolute_url() == "/"
