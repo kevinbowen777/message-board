@@ -1,3 +1,4 @@
+from django.contrib.auth import get_user_model
 from django.test import TestCase
 
 from ..models import Post
@@ -5,7 +6,13 @@ from ..models import Post
 
 class PostModelTest(TestCase):
     def setUp(self):
-        self.post = Post.objects.create(text="just a test")
+        User = get_user_model()
+        self.user = User.objects.create_user(
+            username="kevin",
+            email="kevin@example.com",
+            password="T3stP@5s123",
+        )
+        self.post = Post.objects.create(author=self.user, text="just a test")
 
     def test_text_content(self):
         post = Post.objects.get(id=1)
