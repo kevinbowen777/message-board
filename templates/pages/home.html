@@ -8,7 +8,9 @@
     <h2>Message board homepage</h2>
     <ul>
       {% for post in all_posts_list %}
-        <li>{{ post.text }}</li>
+        <li>{{ post.text }} &middot; <span class="text-muted">by {{ post.author }} |
+                {{ post.date }}</span>
+        </li>
       {% endfor %}
     </ul>
   </p>
