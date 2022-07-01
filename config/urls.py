@@ -11,6 +11,7 @@ urlpatterns = [
     # Local apps
     path("accounts/", include("accounts.urls")),
     path("", include("posts.urls")),
+    path("", include("pages.urls")),
 ]
 
 """
