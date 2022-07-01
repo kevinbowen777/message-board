@@ -1,9 +1,15 @@
+"""URLs for the django-start template project."""
 from django.conf import settings  # noqa:F401
 from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
+    # Django admin
     path("admin/", admin.site.urls),
+    # User management
+    path("accounts/", include("allauth.urls")),
+    # Local apps
+    path("accounts/", include("accounts.urls")),
     path("", include("posts.urls")),
 ]
 
