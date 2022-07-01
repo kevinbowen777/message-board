@@ -60,6 +60,7 @@ Django = "^4.0.4"
 environs = {extras = ["django"], version = "^9.5.0"}
 django-bootstrap4 = "^22.1"
 django-crispy-forms = "^1.14.0"
+django-countries = "^7.3.2"
 django-extensions = "^3.1.5"
 django-allauth = "^0.50.0"
 psycopg2-binary = "^2.9.3"
