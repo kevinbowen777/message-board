@@ -138,6 +138,9 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 #  django-crispy-forms
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
+MEDIA_URL = "/media/"
+MEDIA_ROOT = str(BASE_DIR.joinpath("media"))
+
 # django-debug-toolbar
 # Use the following in Docker only:
 # hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
