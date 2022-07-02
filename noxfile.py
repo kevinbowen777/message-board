@@ -81,6 +81,7 @@ def tests(session):
         session,
         "coverage[toml]",
         "django-coverage-plugin",
+        "django-debug-toolbar",
         "factory-boy",
         "pytest",
         "pytest-cov",
