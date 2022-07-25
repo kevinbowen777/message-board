@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.sites",
     # third-party apps
-    "debug_toolbar",
+    # "debug_toolbar",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
