@@ -14,13 +14,7 @@ message_board is a demonstration of simple Django functionality
  - Admin user can post simple text posts
 
 ### Live Demo on Heroku:
- - [message_board live demo](https://limitless-plains-90973.herokuapp.com/)
-### Docker Container Image:
-
- - TBD
----
-
-
+ - [message_board live demo](https://kbowen-django-message-board.herokuapp.com/)
 
 ---
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/kevinbowen777/message_board/blob/master/LICENSE)
