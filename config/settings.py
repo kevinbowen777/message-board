@@ -38,8 +38,9 @@ INSTALLED_APPS = [
     "django_countries",
     "django_extensions",
     # Local apps
-    "accounts",
-    "posts",
+    "accounts.apps.AccountsConfig",
+    "pages.apps.PagesConfig",
+    "posts.apps.PostsConfig",
 ]
 
 MIDDLEWARE = [
@@ -113,17 +114,17 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATICFILES_DIRS = (str(BASE_DIR.joinpath("static")),)
 STATIC_ROOT = str(BASE_DIR.joinpath("staticfiles"))
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "accounts.CustomUser"
-LOGIN_REDIRECT_URL = "home"
+LOGIN_REDIRECT_URL = "message_list"
 ACCOUNT_LOGOUT_REDIRECT = "home"
 SITE_ID = 1
 
