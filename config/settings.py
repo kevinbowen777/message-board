@@ -30,11 +30,12 @@ INSTALLED_APPS = [
     "django.contrib.sites",
     # third-party apps
     # "debug_toolbar",
+    "bootstrap4",
+    "crispy_forms",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.github",
-    "crispy_forms",
     "django_countries",
     "django_extensions",
     # Local apps
