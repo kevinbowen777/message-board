@@ -1,10 +1,12 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load crispy_forms_tags %}
+
+{% block title %}Message Board - Post a New Message{% endblock title %}
 
 {% block content %}
 <div class="container">
   <p>
-  <h2>New article</h2>
+  <h2>Post a new message:</h2>
   <form class="col-md-6" action="" method="post">
     {% csrf_token %}
     {{ form|crispy }}
