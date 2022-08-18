@@ -4,7 +4,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>{% block title %}Jabberwock{% endblock title %}</title>
+  <title>{% block title %}Message Board{% endblock title %}</title>
   <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}"</>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- CSS -->
@@ -20,7 +20,8 @@
    {% if user.is_authenticated %}
      <ul class="navbar-nav mr-auto">
        <li class="nav-item">
-         <a class="btn btn-outline-light text-light" href="{% url 'post_new' %}">New Post</a>
+         <a class="btn btn-outline-light text-light" href="{% url 'message_new'
+             %}">New Message</a>
        </li>
      </ul>
    {% endif %}
