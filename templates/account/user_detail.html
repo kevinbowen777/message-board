@@ -13,6 +13,9 @@
       {% if object.name %}
         <p><strong>Full name:</strong> {{ object.name }}</p>
       {% endif %}
+      {% if user.age %}
+        <p><strong>Age:</strong> {{ object.age }}</p>
+      {% endif %}
       {% if user.country %}
         <p><strong>Country:</strong> {{ user.country.name }}
         <img src="{{ user.country.flag }}" />
