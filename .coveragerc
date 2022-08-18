@@ -1,5 +1,5 @@
 [run]
-include = accounts/*, config/*, pages/*, posts/*
+include = accounts/*, config/*, pages/*, message/*
 omit =
     */__init__.py,
     *manage.py,
