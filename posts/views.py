@@ -19,3 +19,5 @@ class MessageListView(ListView):
     model = Post
     template_name = "posts/message_list.html"
     context_object_name = "all_messages_list"
+
+    paginate_by = 7
