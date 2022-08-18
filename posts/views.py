@@ -15,7 +15,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
-class MessageListView(ListView):
+class MessageListView(LoginRequiredMixin, ListView):
     model = Post
     template_name = "posts/message_list.html"
     context_object_name = "all_messages_list"
