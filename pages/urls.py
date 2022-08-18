@@ -1,5 +1,5 @@
 from django.urls import path
-from posts.views import MessageListView
+from message.views import MessageListView
 
 from .views import AboutPageView, HomePageView
 

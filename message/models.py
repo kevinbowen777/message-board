@@ -3,7 +3,7 @@ from django.db import models
 from django.urls import reverse
 
 
-class Post(models.Model):
+class Message(models.Model):
     text = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(

@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     # Local apps
     "accounts.apps.AccountsConfig",
     "pages.apps.PagesConfig",
-    "posts.apps.PostsConfig",
+    "message.apps.MessageConfig",
 ]
 
 MIDDLEWARE = [
