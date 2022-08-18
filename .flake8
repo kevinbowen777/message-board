@@ -14,5 +14,5 @@ per-file-ignores =
     config/tests/*:S101,S106
     pages/tests.py:S101,S106
     pages/tests/*:S101,S106
-    posts/tests.py:S101,S106
-    posts/tests/*:S101,S106
+    message/tests.py:S101,S106
+    message/tests/*:S101,S106

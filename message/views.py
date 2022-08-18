@@ -2,12 +2,12 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import ListView
 from django.views.generic.edit import CreateView
 
-from .models import Post
+from .models import Message
 
 
-class PostCreateView(LoginRequiredMixin, CreateView):
-    model = Post
-    template_name = "posts/post_new.html"
+class MessageCreateView(LoginRequiredMixin, CreateView):
+    model = Message
+    template_name = "messages/message_new.html"
     fields = ("text", "author")
 
     def form_valid(self, form):
@@ -16,8 +16,8 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
 
 class MessageListView(LoginRequiredMixin, ListView):
-    model = Post
-    template_name = "posts/message_list.html"
+    model = Message
+    template_name = "messages/message_list.html"
     context_object_name = "all_messages_list"
 
     paginate_by = 7

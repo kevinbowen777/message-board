@@ -11,13 +11,15 @@ exclude = '''
   | staticfiles
   | build
   | dist
-  | posts/migrations
+  | accounts/migrations
+  | message/migrations
+  | pages/migrations
   | ^.*\b(migrations)\b.*$
 )/
 '''
 
 [tool.coverage.paths]
-source = ["accounts", "config", "pages", "posts"]
+source = ["accounts", "config", "pages", "message"]
 
 [tool.coverage.run]
 branch = true
