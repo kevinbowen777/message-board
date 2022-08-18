@@ -11,7 +11,9 @@ exclude = '''
   | staticfiles
   | build
   | dist
-  | posts/migrations
+  | accounts/migrations
+  | message/migrations
+  | pages/migrations
   | ^.*\b(migrations)\b.*$
 )/
 '''
