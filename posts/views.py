@@ -7,7 +7,7 @@ from .models import Post
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
-    template_name = "posts/post_new.html"
+    template_name = "messages/message_new.html"
     fields = ("text", "author")
 
     def form_valid(self, form):
@@ -17,7 +17,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
 class MessageListView(LoginRequiredMixin, ListView):
     model = Post
-    template_name = "posts/message_list.html"
+    template_name = "messages/message_list.html"
     context_object_name = "all_messages_list"
 
     paginate_by = 7
