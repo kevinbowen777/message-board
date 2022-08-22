@@ -1,12 +1,13 @@
 {% load bootstrap4 %}
 {% load static %}
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>{% block title %}Message Board{% endblock title %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Message Board | {% block title %}{% endblock title %}</title>
   <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}"</>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- CSS -->
   {% bootstrap_css %}
   {% bootstrap_javascript jquery='full' %}
