@@ -6,13 +6,15 @@
 <div class="container">
   <p>
     <h2>Message board</h2>
-    <ul>
       {% for message in all_messages_list %}
-        <li>{{ message.text }} &middot; <span class="text-muted">by {{ message.author }} |
-                {{ message.date }}</span>
-        </li>
+        <div class="card">
+          <div class="card-body">
+            {{ message.text }} &middot; <span class="text-muted">by {{ message.author }} | {{ message.date }}</span>
+            <a href="{% url 'message_update' message.pk %}">Update</a> |
+            <a href="{% url 'message_delete' message.pk %}">Delete</a> |
+          </div>
+        </div>
       {% endfor %}
-    </ul>
   </p>
 </div>
 {% endblock content %}

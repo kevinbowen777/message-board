@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <p>
+  <div class="post-entry">
+    <h2>{{ message.text }}</h2>
+    <p>{{ message.text }}</p>
+  </div>
+
+  <a class="btn btn-info" href="{% url 'message_edit' post.pk %}">Edit Message</a>
+  <a class="btn btn-danger" href="{% url 'message_delete' post.pk %}">Delete Message</a>
+  </p>
+</div>
+{% endblock content %}
