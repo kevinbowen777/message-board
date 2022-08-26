@@ -1,4 +1,4 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.urls import reverse_lazy
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
@@ -18,9 +18,13 @@ class MessageCreateView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy("message_list")
 
 
-class MessageDeleteView(DeleteView):
+class MessageDeleteView(UserPassesTestMixin, DeleteView):
     model = Message
     template_name = "messages/message_delete.html"
+
+    def test_func(self):
+        obj = self.get_object()
+        return obj.author == self.request.user
 
     success_url = reverse_lazy("message_list")
 
@@ -39,9 +43,13 @@ class MessageListView(LoginRequiredMixin, ListView):
     paginate_by = 7
 
 
-class MessageUpdateView(UpdateView):
+class MessageUpdateView(UserPassesTestMixin, UpdateView):
     model = Message
     template_name = "messages/message_update.html"
     fields = ("text",)
+
+    def test_func(self):
+        obj = self.get_object()
+        return obj.author == self.request.user
 
     success_url = reverse_lazy("message_list")

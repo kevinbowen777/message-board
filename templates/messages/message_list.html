@@ -10,8 +10,11 @@
         <div class="card">
           <div class="card-body">
             {{ message.text }} &middot; <span class="text-muted">by {{ message.author }} | {{ message.date }}</span>
-            <a href="{% url 'message_update' message.pk %}">Update</a> |
-            <a href="{% url 'message_delete' message.pk %}">Delete</a> |
+              {% if request.user == message.author %}
+                <a href="{% url 'message_update' message.pk %}">Update</a> |
+                <a href="{% url 'message_delete' message.pk %}">Delete</a> |
+              {% else %}
+              {% endif %}
           </div>
         </div>
       {% endfor %}
