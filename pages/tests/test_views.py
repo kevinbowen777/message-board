@@ -1,16 +1,26 @@
-from django.test import SimpleTestCase
+from django.test import TestCase
 from django.urls import resolve, reverse
 
 from ..views import AboutPageView, HomePageView
 
 
-class HomePageTests(SimpleTestCase):
+class AdminPageTest(TestCase):
+    def test_admin_login_page_status_code(self):
+        resp = self.client.get("/admin/login/?next=/admin/")
+        self.assertEqual(resp.status_code, 200)
+
+
+class HomePageTests(TestCase):
     def setUp(self):
         url = reverse("home")
         self.response = self.client.get(url)
 
     def test_home_page_status_code(self):
         self.assertEqual(self.response.status_code, 200)
+
+    def test_view_url_exists_at_proper_location(self):
+        resp = self.client.get("/")
+        self.assertEqual(resp.status_code, 200)
 
     def test_home_page_template(self):
         self.assertTemplateUsed(self.response, "pages/home.html")
@@ -29,7 +39,7 @@ class HomePageTests(SimpleTestCase):
         )
 
 
-class AboutPageTests(SimpleTestCase):
+class AboutPageTests(TestCase):
     def setUp(self):
         url = reverse("about")
         self.response = self.client.get(url)
