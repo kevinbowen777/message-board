@@ -9,7 +9,7 @@ from .models import Message
 class MessageCreateView(LoginRequiredMixin, CreateView):
     model = Message
     template_name = "messages/message_new.html"
-    fields = ("text", "author")
+    fields = ("text",)
 
     def form_valid(self, form):
         form.instance.author = self.request.user
