@@ -7,6 +7,11 @@ message_board
 
    license
 
+.. contents:: Table of Contents
+   :local:
+   :backlinks: top
+   :depth: 2
+
 message_board is a simple text posting application built with the Django web framework
 
 Features
@@ -18,11 +23,9 @@ Features
    * User registration with email verification & social(GitHub) login
    * Bootstrap4 & crispy-forms decorations
    * Customizable user profile pages with bio, profile pic, & country flags
-   * image carousel
-   * pagination template
  * Dev/testing
 
-   * basic module testing templates
+   * Basic module testing templates
    * Coverage reports
    * Debug-toolbar available
    * Examples of using Factories & pytest fixtures in account app testing
@@ -30,15 +33,15 @@ Features
    * Nox testing sessions for latest Python 3.9, 3.10, and 3.11
 
      * black
-     * Sphinx documentaion generations
+     * Sphinx documentaion generation
      * linting
        
        * flake8
        * flake8-bugbear
        * flake8-docstrings
        * flake8-import-order
-       * safety(python package vulnerability testing)
-       * pytest sessions with coverage
+     * safety(python package vulnerability testing)
+     * pytest sessions with coverage
 
 Installation
 ------------
@@ -51,8 +54,8 @@ run this command in your terminal:
    $ git clone https://github.com/kevinbowen777/message_board.git
    $ cd message_board
 
-Local install:
---------------
+Local installation
+------------------
 
 .. code-block:: console
 
@@ -62,8 +65,8 @@ Local install:
    $ python manage.py createsuperuser
 
 
-Docker install:
----------------
+Docker installation
+-------------------
 
 .. code-block:: console
 
@@ -96,8 +99,10 @@ Testing
    $ nox -rs lint-3.11
    $ nox -s tests
 
-Live Application Demonstration on Heroku
-----------------------------------------
+Application Demo
+----------------
+Live demonstration of application running on Heroku:
+
 `kbowen-django-message-board <https://kbowen-django-message-board.herokuapp.com/>`_
 
 Reporting Bugs
