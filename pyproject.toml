@@ -50,7 +50,7 @@ extend_skip = ["*.md", "*.json"]
 line_length = 79
 
 [tool.poetry]
-name = "message_board"
+name = "message-board"
 version = "0.1.0"
 description = "A simple message board"
 authors = ["Kevin Bowen <kevin.bowen@gmail.com>"]
