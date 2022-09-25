@@ -1,4 +1,4 @@
-message_board
+message-board
 =============
 
 .. toctree::
@@ -12,7 +12,7 @@ message_board
    :backlinks: top
    :depth: 2
 
-message_board is a simple text posting application built with the Django web framework
+message-board is a simple text posting application built with the Django web framework
 
 Features
 --------
@@ -108,4 +108,4 @@ Live demonstration of application running on Heroku:
 Reporting Bugs
 --------------
 
-Visit the message_board `Issues page <https://github.com/kevinbowen777/message_board/issues>`_ on GitHub.
+Visit the message_board `Issues page <https://github.com/kevinbowen777/message-board/issues>`_ on GitHub.

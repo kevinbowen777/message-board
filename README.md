@@ -1,14 +1,14 @@
-## message_board
+## message-board
 
 <div align="center">
 
   [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-  [![GitHub Issues](https://img.shields.io/github/issues/kevinbowen777/message_board.svg)](https://github.com/kevinbowen777/message_board/issues)
+  [![GitHub Issues](https://img.shields.io/github/issues/kevinbowen777/message-board.svg)](https://github.com/kevinbowen777/message-board/issues)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
 
-message_board is a simple text posting application built with the Django web framework
+message-board is a simple text posting application built with the Django web framework
 
 ##### Table of Contents
  - [Features](#features)
@@ -81,5 +81,5 @@ message_board is a simple text posting application built with the Django web fra
 
 ### Reporting Bugs
 
-   Visit the [Issues page](https://github.com/kevinbowen777/message_board/issues)
+   Visit the [Issues page](https://github.com/kevinbowen777/message-board/issues)
       to view currently open bug reports or open a new issue.
