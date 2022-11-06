@@ -1,10 +1,11 @@
 # Pull base image
-FROM python:3.10
+FROM python:3.11
+LABEL maintainer="Kevin Bowen <kevin.bowen@gmail.com>"
 
 ARG MESSAGE_BOARD
 
 # Set environment variables
-ENV MESSAGE_BOARD=${MESSAGE_BOARD} \
+ENV DEBUG="${DEBUG}" \
   PYTHONDONTWRITEBYTECODE=1 \
   PYTHONFAULTHANDLER=1 \
   PYTHONUNBUFFERED=1 \
@@ -12,7 +13,7 @@ ENV MESSAGE_BOARD=${MESSAGE_BOARD} \
   PIP_NO_CACHE_DIR=off \
   PIP_DISABLE_PIP_VERSION_CHECK=on \
   PIP_DEFAULT_TIMEOUT=100 \
-  POETRY_VERSION=1.1.13
+  POETRY_VERSION=1.2.2
 
 # System dependencies
 RUN pip install "poetry==$POETRY_VERSION"
