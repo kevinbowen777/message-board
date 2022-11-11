@@ -46,8 +46,8 @@ message-board is a simple text posting application built with the Django web fra
      - For additional links to package resources used in this repository, see the [Package Index](docs/package_index.md)
 
 ### Installation
- - `git clone https://github.com/kevinbowen777/message_board.git`
- - `cd message_board`
+ - `git clone https://github.com/kevinbowen777/message-board.git`
+ - `cd message-board`
  - Local installation:
      - `poetry shell`
      - `poetry install`
@@ -61,7 +61,7 @@ message-board is a simple text posting application built with the Django web fra
      Additional commands:
        - `docker compose exec web python manage.py shell_plus`
          (loads Django shell autoloading project models & classes)
-       - `docker run -it django-start-web bash`
+       - `docker run -it message-board-web bash`
          (CLI access to container)
  - Browse to http://127.0.0.1:8000 or http://127.0.0.1:8000/admin/
 
@@ -82,6 +82,30 @@ message-board is a simple text posting application built with the Django web fra
 ---
 
 ### Screenshots
+
+### Home
+![Home](https://github.com/kevinbowen777/message-board/blob/master/images/message-board_home.png)
+
+### Message Index
+![Message Index](https://github.com/kevinbowen777/message-board/blob/master/images/message-board_index.png)
+
+### Profile Page
+![Profile Page](https://github.com/kevinbowen777/message-board/blob/master/images/message-board_profile-page.png)
+
+### Login Page
+![Login Page](https://github.com/kevinbowen777/message-board/blob/master/images/message-board_sign-in.png)
+
+### New Message
+![New Message](https://github.com/kevinbowen777/message-board/blob/master/images/message-board_new-message.png)
+
+### Edit Message
+![Edit Message](https://github.com/kevinbowen777/message-board/blob/master/images/message-board_edit-message.png)
+
+### Delete Message
+![Delete Message](https://github.com/kevinbowen777/message-board/blob/master/images/message-board_delete-message.png)
+
+### Email Address management
+![Email Address management](https://github.com/kevinbowen777/message-board/blob/master/images/message-board_email-addresses.png)
 
 ---
 

@@ -52,8 +52,8 @@ run this command in your terminal:
 
 .. code-block:: console
 
-   $ git clone https://github.com/kevinbowen777/message_board.git
-   $ cd message_board
+   $ git clone https://github.com/kevinbowen777/message-board.git
+   $ cd message-board
 
 Local installation
 ------------------
