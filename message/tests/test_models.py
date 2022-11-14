@@ -1,11 +1,16 @@
-from django.contrib.auth import get_user_model
+from accounts.tests.factories import UserFactory
 from django.test import TestCase
 
-from ..models import Message
+from .factories import MessageFactory
+
+# from ..models import Message
 
 
-class PostModelTest(TestCase):
+class MessageModelTest(TestCase):
     def setUp(self):
+        self.user = UserFactory()
+        self.message = MessageFactory()
+        """
         User = get_user_model()
         self.user = User.objects.create_user(
             username="kevin",
@@ -15,16 +20,23 @@ class PostModelTest(TestCase):
         self.message = Message.objects.create(
             author=self.user, text="just a test"
         )
+        """
 
+    """
     def test_text_content(self):
         message = Message.objects.get(id=1)
         self.text = f"{message.text}"
         # expected_object_name = f"{message.text}"
         # self.assertEqual(expected_object_name, "just a test")
         self.assertEqual(self.text, "just a test")
+    """
 
     def test_message___str__(self):
-        self.assertEqual(str(self.message), self.message.text)
+        # self.assertEqual(str(self.message), self.message.text)
+        assert self.message.__str__() == self.message.text
+        assert str(self.message) == self.message.text
 
     def test_message_get_absolute_url(self):
+        # url = self.message.get_absolute_url()
+        # assert url == f"/messages/{self.message.id}/"
         assert self.message.get_absolute_url() == "/"
