@@ -1,4 +1,4 @@
-"""Nox sessions - message_board."""
+"""Nox sessions - message-board."""
 import tempfile
 
 import nox
@@ -97,7 +97,7 @@ def safety(session):
         )
 
 
-@nox.session(python=["3.12", "3.11", "3.10", "3.9"])
+@nox.session(python=["3.12", "3.11", "3.10"])
 def tests(session):
     """Run the test suite."""
     args = session.posargs or ["--cov"]
