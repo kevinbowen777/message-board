@@ -93,28 +93,28 @@ TBD
 ### Screenshots
 
 ### Home
-![Home](https://github.com/kevinbowen777/message-board/blob/master/images/message-board_home.png)
+![Home](images/message-board_home.png)
 
 ### Message Index
-![Message Index](https://github.com/kevinbowen777/message-board/blob/master/images/message-board_index.png)
+![Message Index](images/message-board_index.png)
 
 ### Profile Page
-![Profile Page](https://github.com/kevinbowen777/message-board/blob/master/images/message-board_profile-page.png)
+![Profile Page](images/message-board_profile-page.png)
 
 ### Login Page
-![Login Page](https://github.com/kevinbowen777/message-board/blob/master/images/message-board_sign-in.png)
+![Login Page](images/message-board_sign-in.png)
 
 ### New Message
-![New Message](https://github.com/kevinbowen777/message-board/blob/master/images/message-board_new-message.png)
+![New Message](images/message-board_new-message.png)
 
 ### Edit Message
-![Edit Message](https://github.com/kevinbowen777/message-board/blob/master/images/message-board_edit-message.png)
+![Edit Message](images/message-board_edit-message.png)
 
 ### Delete Message
-![Delete Message](https://github.com/kevinbowen777/message-board/blob/master/images/message-board_delete-message.png)
+![Delete Message](images/message-board_delete-message.png)
 
 ### Email Address management
-![Email Address management](https://github.com/kevinbowen777/message-board/blob/master/images/message-board_email-addresses.png)
+![Email Address management](images/message-board_email-addresses.png)
 
 ---
 
