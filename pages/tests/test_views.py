@@ -1,4 +1,4 @@
-from django.test import SimpleTestCase
+from django.test import TestCase
 from django.urls import resolve, reverse
 
 from ..forms import ContactForm
@@ -10,13 +10,13 @@ from ..views import (
 )
 
 
-class AdminPageTest(SimpleTestCase):
+class AdminPageTest(TestCase):
     def test_admin_login_page_status_code(self):
         resp = self.client.get("/admin/login/?next=/admin/")
         self.assertEqual(resp.status_code, 200)
 
 
-class HomePageTests(SimpleTestCase):
+class HomePageTests(TestCase):
     def setUp(self):
         url = reverse("home")
         self.response = self.client.get(url)
@@ -45,7 +45,7 @@ class HomePageTests(SimpleTestCase):
         )
 
 
-class AboutPageTests(SimpleTestCase):
+class AboutPageTests(TestCase):
     def setUp(self):
         url = reverse("about")
         self.response = self.client.get(url)
@@ -70,7 +70,7 @@ class AboutPageTests(SimpleTestCase):
         )
 
 
-class ContactViewTests(SimpleTestCase):
+class ContactViewTests(TestCase):
     def setUp(self):
         url = reverse("contact")
         self.response = self.client.get(url)
@@ -104,7 +104,7 @@ class ContactViewTests(SimpleTestCase):
         self.assertTrue(form.is_valid())
 
 
-class SuccessViewTests(SimpleTestCase):
+class SuccessViewTests(TestCase):
     def setUp(self):
         url = reverse("success")
         self.response = self.client.get(url)
