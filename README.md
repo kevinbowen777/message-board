@@ -65,7 +65,7 @@ message-board is a simple text posting application built with the Django web fra
          (loads Django shell autoloading project models & classes)
        - `docker run -it message-board-web bash`
          (CLI access to container)
- - Browse to http://127.0.0.1:8000 or http://127.0.0.1:8000/admin/
+ - Browse to http://127.0.0.1:8000 or http://127.0.0.1:8000/resources/
 
 ---
 
