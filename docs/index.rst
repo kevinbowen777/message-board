@@ -13,7 +13,7 @@ message-board
    :backlinks: top
    :depth: 2
 
-message-board is a simple text posting application built with the Django web framework
+message-board is a simple text posting application built with the Django 4.2.x web framework
 
 Features
 --------
