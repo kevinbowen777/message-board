@@ -7,13 +7,15 @@ message-board
 
    license
    package_index
+   create_new_users
+   create_new_messages
 
 .. contents:: Table of Contents
    :local:
    :backlinks: top
    :depth: 2
 
-message-board is a simple text posting application built with the Django 4.2.x web framework
+message-board is a simple text posting application built with the Django 4.2.x web application framework
 
 Features
 --------
