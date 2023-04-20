@@ -40,7 +40,7 @@ class MessageListView(LoginRequiredMixin, ListView):
     template_name = "messages/message_list.html"
     context_object_name = "all_messages_list"
 
-    paginate_by = 7
+    paginate_by = 3
 
 
 class MessageUpdateView(UserPassesTestMixin, UpdateView):

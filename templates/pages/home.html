@@ -3,13 +3,12 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-{% block page_header %}
   <div class="jumbotron">
     <h2 class="display-4">Welcome to the Message Board</h2>
 
     {% if user.is_authenticated %}
 
-      <a class="btn btn-lg btn-primary" href="messages/" role="button">Browse the Message Board &raquo;</a>
+      <a class="btn btn-lg btn-primary" href="messages/" role="button">Browse Messages &raquo;</a>
     {% else %}
 
     <p class="lead">A simple message board made with Django.</p>
@@ -18,5 +17,4 @@
         role="button">Register &raquo;</a>
     {% endif %}
   </div>
-{% endblock page_header %}
 {% endblock content %}
