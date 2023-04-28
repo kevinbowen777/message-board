@@ -6,7 +6,8 @@
 <div class="container">
   <p>
     <h2>Message board</h2>
-      {% for message in all_messages_list %}
+    <ul>
+      {% for message in page_obj %}
         <div class="card">
           <div class="card-body">
             {{ message.text }} &middot; <span class="text-muted">by {{ message.author }} | {{ message.date }}</span>
@@ -18,6 +19,7 @@
           </div>
         </div>
       {% endfor %}
+    </ul>
   </p>
 </div>
 {% endblock content %}
