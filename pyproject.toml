@@ -39,13 +39,44 @@ show_missing = true
 name = "message-board"
 version = "0.1.0"
 description = "A simple message board"
-authors = ["Kevin Bowen <kevin.bowen@gmail.com>"]
+authors = [
+    "Kevin Bowen <kevin.bowen@gmail.com>",
+]
+maintainers = [
+]
 license = "MIT"
+
+readme = "README.md"
+
+homepage = ""
+repository = "https://github.com/kevinbowen777/message-board.git"
+documentation = "file: README.rst"
+
+keywords = ["django", "web-application", "template"]
+
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Django :: 4.2",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 Django = "4.2.1"
-environs = {extras = ["django"], version = "^9.5.0"}
+
+environs = { version = "^9.5.0", extras = ["django"] }
 django-crispy-forms = "^2.0"
 django-countries = "^7.3.2"
 django-extensions = "^3.1.5"
