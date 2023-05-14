@@ -37,7 +37,7 @@ show_missing = true
 
 [tool.poetry]
 name = "message-board"
-version = "0.1.0"
+version = "0.2.0"
 description = "A simple message board"
 authors = [
     "Kevin Bowen <kevin.bowen@gmail.com>",
