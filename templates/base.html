@@ -74,7 +74,7 @@
     <div class="container">
       {% if messages %}
         {% for message in messages %}
-            <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+            <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></div>
         {% endfor %}
       {% endif %}
       {% block content %}
@@ -85,9 +85,9 @@
     {% if page_obj.has_other_pages %}
     <ul class="pagination">
         {% if page_obj.has_previous %}
-        <li><a class="btn btn-info btn-sm mr-1" href="?page={{ page_obj.previous_page_number }}">&laquo; Previous</a></li>
+        <li><a class="btn btn-info btn-sm mr-1" href="?page={{ page_obj.previous_page_number }}">« Previous</a></li>
         {% else %}
-        <li class="btn btn-info btn-sm disabled mr-1"><span>&laquo; Previous</span></li>
+        <li class="btn btn-info btn-sm disabled mr-1"><span>« Previous</span></li>
         {% endif %}
         {% for i in page_obj.paginator.page_range %}
         {% if page_obj.number == i %}
@@ -97,9 +97,9 @@
         {% endif %}
         {% endfor %}
         {% if page_obj.has_next %}
-        <li><a class="btn btn-info btn-sm" href="?page={{ page_obj.next_page_number }}">Next &raquo;</a></li>
+        <li><a class="btn btn-info btn-sm" href="?page={{ page_obj.next_page_number }}">Next »</a></li>
         {% else %}
-        <li class="btn btn-info btn-sm disabled"><span>Next &raquo;</span></li>
+        <li class="btn btn-info btn-sm disabled"><span>Next »</span></li>
         {% endif %}
     </ul>
     {% endif %}
@@ -119,7 +119,7 @@
     <div class="col-md-12 col-sm-12 col-sm-push-6">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item col-md-2">
-           <p style="color:white;font-size:60%"> &copy; 2023 message-board&reg;</p>
+           <p style="color:white;font-size:60%"> © 2023 message-board®</p>
           </li>
           <li class="nav-item col-md-2">
           </li>

@@ -10,7 +10,7 @@
       {% for message in page_obj %}
         <div class="card">
           <div class="card-body">
-            {{ message.text }} &middot; <span class="text-muted">by {{ message.author }} | {{ message.date }}</span>
+            {{ message.text }} · <span class="text-muted">by {{ message.author }} | {{ message.date }}</span>
               {% if request.user == message.author %}
                 <a href="{% url 'message_update' message.pk %}">Update</a> |
                 <a href="{% url 'message_delete' message.pk %}">Delete</a> |
