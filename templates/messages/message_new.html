@@ -1,18 +1,20 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 
-{% block title %}Message Board - Post a New Message{% endblock title %}
+{% block title %}
+  Message Board - Post a New Message
+{% endblock title %}
 
 {% block content %}
-<div class="container">
-  <p>
-  <h2>Post a new message:</h2>
-  <form class="col-md-6" action="" method="post">
-    {% csrf_token %}
-    {{ form|crispy }}
-    <button class="btn btn-success ml-2" type="submit">Save</button>
-    <a class="btn btn-info" href="#" onclick="window.history.back()">Cancel</a>
-  </form>
-  </p>
-</div>
+  <div class="container">
+    <p>
+      <h2>Post a new message:</h2>
+      <form class="col-md-6" action="" method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn btn-success ml-2" type="submit">Save</button>
+        <a class="btn btn-info" href="#" onclick="window.history.back()">Cancel</a>
+      </form>
+    </p>
+  </div>
 {% endblock content %}
