@@ -12,7 +12,7 @@ In the application directory, run the following command:
     $ python manage.py shell_plus
 
 Sample Message list
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
