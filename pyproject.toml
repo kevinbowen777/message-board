@@ -49,6 +49,7 @@ Pillow = "^10.0"
 whitenoise = "6.4.0"
 gunicorn = "^21.0"
 crispy-bootstrap4 = "^2022.1"
+django-types = "^0.17.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.0.0"
@@ -114,6 +115,41 @@ exclude="htmlcov"
 files=["templates/"]
 indent=2
 preserve_blank_lines=true
+
+[tool.pyright]
+include = ["config", "accounts", "pages", "message",]
+exclude = ["**/tests",
+    "**/__pycache__",
+    "**/migrations",
+]
+ignore = ["docs/_build"]
+defineConstant = { DEBUG = true }
+stubPath = ""
+venv = "message-board-OOw-3abh-py3.11"
+venvPath = "../../../venvs"
+
+typeCheckingMode = "basic"
+useLibraryCodeForTypes = true
+strictListInference = true
+strictDictionaryInference = true
+reportConstantRedefinition = "error"
+reportOptionalCall = "error"
+reportOptionalContextManager = "error"
+reportOptionalIterable = "error"
+reportOptionalMemberAccess = "error"
+reportMissingImports = true
+reportOptionalOperand = "error"
+reportOptionalSubscript = "error"
+reportUnnecessaryCast = "warning"
+reportUnnecessaryComparison = "error"
+reportUnnecessaryTypeIgnoreComment = "warning"
+
+pythonVersion = "3.11"
+pythonPlatform = "Linux"
+
+executionEnvironments = [
+  { root = ".", pythonVersion = "3.11", extraPaths = [ "accounts", "config", "pages", "message" ] },
+]
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "config.settings"
