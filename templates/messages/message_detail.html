@@ -1,15 +1,20 @@
 {% extends "base.html" %}
 
+{% block title %}
+  {{ message.title }}
+{% endblock title %}
+
 {% block content %}
   <div class="container">
     <p>
       <div class="post-entry">
-        <h2>{{ message.text }}</h2>
-        <p>{{ message.text }}</p>
+        <h2>{{ message.title }}</h2>
+        <span class="text-muted">by {{ message.author }} | {{ message.publish }}</span>
+        <p>{{ message.body|linebreaks }}</p>
       </div>
 
-      <a class="btn btn-info" href="{% url 'message_edit' post.pk %}">Edit Message</a>
-      <a class="btn btn-danger" href="{% url 'message_delete' post.pk %}">Delete Message</a>
+      <a class="btn btn-info" href="{% url 'message_update' message.pk %}">Edit Message</a>
+      <a class="btn btn-danger" href="{% url 'message_delete' message.pk %}">Delete Message</a>
     </p>
   </div>
 {% endblock content %}
