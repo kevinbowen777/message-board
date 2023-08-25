@@ -15,8 +15,9 @@ def message():
 
 
 class MessageFactory(factory.django.DjangoModelFactory):
-    text = factory.fuzzy.FuzzyText(length=12, prefix="Message: ")
-    date = factory.fuzzy.FuzzyDate(datetime.date(2022, 6, 23))
+    title = factory.fuzzy.FuzzyText(length=12, prefix="Message: ")
+    body = factory.fuzzy.FuzzyText(length=12, prefix="Message: ")
+    publish = factory.fuzzy.FuzzyDate(datetime.date(2022, 6, 23))
     author = factory.SubFactory(UserFactory)
 
     class Meta:

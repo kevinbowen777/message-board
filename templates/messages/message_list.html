@@ -9,13 +9,16 @@
     <p>
       <h2>Message board</h2>
       <ul>
-        {% for message in page_obj %}
+        {% for message in messages %}
           <div class="card">
             <div class="card-body">
-              {{ message.text }} · <span class="text-muted">by {{ message.author }} | {{ message.date }}</span>
+              <h5>
+                · <a href="{{ message.get_absolute_url }}">{{ message.title }}</a> ·
+              </h5>
+              {{ message.body|truncatewords:30|linebreaks }} · <span class="text-muted">by {{ message.author }} | {{ message.publish }}</span>
               {% if request.user == message.author %}
                 <a href="{% url 'message_update' message.pk %}">Update</a> |
-                <a href="{% url 'message_delete' message.pk %}">Delete</a> |
+                <a href="{% url 'message_delete' message.pk %}">Delete</a>
               {% else %}
               {% endif %}
             </div>

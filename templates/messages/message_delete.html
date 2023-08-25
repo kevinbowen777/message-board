@@ -4,6 +4,7 @@
 {% block title %}
   Delete Message
 {% endblock title %}
+
 {% block content %}
   <div class="container">
     <p>
@@ -12,7 +13,7 @@
         {% csrf_token %}
         <p>Are you sure you want to delete the message:</p>
         <p>
-          "<em>{{ message.text }}</em>"?
+          "<em>{{ message.title }}</em>"?
         </p>
         <input class="btn btn-danger" type="submit" value="Confirm">
         <a class="btn btn-info" href="#" onclick="window.history.back()">Cancel</a>
