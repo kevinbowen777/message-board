@@ -55,22 +55,6 @@ def message_list(request):
     )
 
 
-"""
-class MessageDetailView(DetailView):
-    model = Message
-    template_name = "messages/message_detail.html"
-    context_object_name = "message"
-
-
-class MessageListView(LoginRequiredMixin, ListView):
-    model = Message
-    template_name = "messages/message_list.html"
-    context_object_name = "all_messages_list"
-
-    paginate_by = 3
-"""
-
-
 class MessageUpdateView(UserPassesTestMixin, UpdateView):
     model = Message
     template_name = "messages/message_update.html"
