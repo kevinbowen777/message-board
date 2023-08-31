@@ -2,16 +2,16 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for message/views.py: 94.29%</title>
+    <title>Coverage for message/views.py: 94.12%</title>
     <link rel="icon" sizes="32x32" href="favicon_32.png">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript">
         contexts = {
   "a": "(empty)",
-  "b": "message.tests.test_views.MessageTests.test_message_delete",
-  "c": "message.tests.test_views.MessageTests.test_message_detail_view",
-  "d": "message.tests.test_views.MessageTests.test_message_list",
-  "e": "message.tests.test_views.MessageTests.test_message_update"
+  "b": "message.tests.test_views.test_message_delete",
+  "c": "message.tests.test_views.test_message_detail_view",
+  "d": "message.tests.test_views.test_message_list_view",
+  "e": "message.tests.test_views.test_message_update"
 }
     </script>
     <script type="text/javascript" src="coverage_html.js" defer></script>
@@ -21,7 +21,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>message/views.py</b>:
-            <span class="pc_cov">94.29%</span>
+            <span class="pc_cov">94.12%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -64,8 +64,8 @@
             </div>
         </aside>
         <h2>
-            <span class="text">35 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">33<span class="text"> run</span></button>
+            <span class="text">34 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">32<span class="text"> run</span></button>
             <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">2<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
             <button type="button" class="par run show_par button_toggle_par" value="par" data-shortcut="p" title="Toggle lines partially run">0<span class="text"> partial</span></button>
@@ -76,7 +76,7 @@
             <a id="nextFileLink" class="nav" href="d_9df13ddeb1e47e46_admin_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.0">coverage.py v7.3.0</a>,
-            created at 2023-08-25 00:29 -0700
+            created at 2023-08-30 22:56 -0700
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -148,32 +148,16 @@
     <p class="pln"><span class="n"><a id="t55" href="#t55">55</a></span><span class="t">    <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t56" href="#t56">56</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t57" href="#t57">57</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t58" href="#t58">58</a></span><span class="t"><span class="str">"""</span>&nbsp;</span><span class="r"><label for="ctxs58" class="ctx">(empty)</label></span></p>
-    <p class="pln"><span class="n"><a id="t59" href="#t59">59</a></span><span class="t"><span class="str">class MessageDetailView(DetailView):</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t60" href="#t60">60</a></span><span class="t"><span class="str">    model = Message</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t61" href="#t61">61</a></span><span class="t"><span class="str">    template_name = "messages/message_detail.html"</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t62" href="#t62">62</a></span><span class="t"><span class="str">    context_object_name = "message"</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t63" href="#t63">63</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t64" href="#t64">64</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t65" href="#t65">65</a></span><span class="t"><span class="str">class MessageListView(LoginRequiredMixin, ListView):</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t66" href="#t66">66</a></span><span class="t"><span class="str">    model = Message</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t67" href="#t67">67</a></span><span class="t"><span class="str">    template_name = "messages/message_list.html"</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t68" href="#t68">68</a></span><span class="t"><span class="str">    context_object_name = "all_messages_list"</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t69" href="#t69">69</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t70" href="#t70">70</a></span><span class="t"><span class="str">    paginate_by = 3</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t71" href="#t71">71</a></span><span class="t"><span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t72" href="#t72">72</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t73" href="#t73">73</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t74" href="#t74">74</a></span><span class="t"><span class="key">class</span> <span class="nam">MessageUpdateView</span><span class="op">(</span><span class="nam">UserPassesTestMixin</span><span class="op">,</span> <span class="nam">UpdateView</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"><label for="ctxs74" class="ctx">(empty)</label></span></p>
-    <p class="run"><span class="n"><a id="t75" href="#t75">75</a></span><span class="t">    <span class="nam">model</span> <span class="op">=</span> <span class="nam">Message</span>&nbsp;</span><span class="r"><label for="ctxs75" class="ctx">(empty)</label></span></p>
-    <p class="run"><span class="n"><a id="t76" href="#t76">76</a></span><span class="t">    <span class="nam">template_name</span> <span class="op">=</span> <span class="str">"messages/message_update.html"</span>&nbsp;</span><span class="r"><label for="ctxs76" class="ctx">(empty)</label></span></p>
-    <p class="run"><span class="n"><a id="t77" href="#t77">77</a></span><span class="t">    <span class="nam">fields</span> <span class="op">=</span> <span class="op">[</span><span class="str">"title"</span><span class="op">,</span> <span class="str">"status"</span><span class="op">,</span> <span class="str">"body"</span><span class="op">]</span>&nbsp;</span><span class="r"><label for="ctxs77" class="ctx">(empty)</label></span></p>
-    <p class="pln"><span class="n"><a id="t78" href="#t78">78</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t79" href="#t79">79</a></span><span class="t">    <span class="key">def</span> <span class="nam">test_func</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"><label for="ctxs79" class="ctx">(empty)</label></span></p>
-    <p class="run"><span class="n"><a id="t80" href="#t80">80</a></span><span class="t">        <span class="nam">obj</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">get_object</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><input type="checkbox" id="ctxs80" /><span class="r"><label for="ctxs80" class="ctx">1 ctx</label></span><span class="ctxs">1e</span></p>
-    <p class="run"><span class="n"><a id="t81" href="#t81">81</a></span><span class="t">        <span class="key">return</span> <span class="nam">obj</span><span class="op">.</span><span class="nam">author</span> <span class="op">==</span> <span class="nam">self</span><span class="op">.</span><span class="nam">request</span><span class="op">.</span><span class="nam">user</span>&nbsp;</span><input type="checkbox" id="ctxs81" /><span class="r"><label for="ctxs81" class="ctx">1 ctx</label></span><span class="ctxs">1e</span></p>
-    <p class="pln"><span class="n"><a id="t82" href="#t82">82</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t83" href="#t83">83</a></span><span class="t">    <span class="nam">success_url</span> <span class="op">=</span> <span class="nam">reverse_lazy</span><span class="op">(</span><span class="str">"message_list"</span><span class="op">)</span>&nbsp;</span><span class="r"><label for="ctxs83" class="ctx">(empty)</label></span></p>
+    <p class="run"><span class="n"><a id="t58" href="#t58">58</a></span><span class="t"><span class="key">class</span> <span class="nam">MessageUpdateView</span><span class="op">(</span><span class="nam">UserPassesTestMixin</span><span class="op">,</span> <span class="nam">UpdateView</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"><label for="ctxs58" class="ctx">(empty)</label></span></p>
+    <p class="run"><span class="n"><a id="t59" href="#t59">59</a></span><span class="t">    <span class="nam">model</span> <span class="op">=</span> <span class="nam">Message</span>&nbsp;</span><span class="r"><label for="ctxs59" class="ctx">(empty)</label></span></p>
+    <p class="run"><span class="n"><a id="t60" href="#t60">60</a></span><span class="t">    <span class="nam">template_name</span> <span class="op">=</span> <span class="str">"messages/message_update.html"</span>&nbsp;</span><span class="r"><label for="ctxs60" class="ctx">(empty)</label></span></p>
+    <p class="run"><span class="n"><a id="t61" href="#t61">61</a></span><span class="t">    <span class="nam">fields</span> <span class="op">=</span> <span class="op">[</span><span class="str">"title"</span><span class="op">,</span> <span class="str">"status"</span><span class="op">,</span> <span class="str">"body"</span><span class="op">]</span>&nbsp;</span><span class="r"><label for="ctxs61" class="ctx">(empty)</label></span></p>
+    <p class="pln"><span class="n"><a id="t62" href="#t62">62</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t63" href="#t63">63</a></span><span class="t">    <span class="key">def</span> <span class="nam">test_func</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"><label for="ctxs63" class="ctx">(empty)</label></span></p>
+    <p class="run"><span class="n"><a id="t64" href="#t64">64</a></span><span class="t">        <span class="nam">obj</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">get_object</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><input type="checkbox" id="ctxs64" /><span class="r"><label for="ctxs64" class="ctx">1 ctx</label></span><span class="ctxs">1e</span></p>
+    <p class="run"><span class="n"><a id="t65" href="#t65">65</a></span><span class="t">        <span class="key">return</span> <span class="nam">obj</span><span class="op">.</span><span class="nam">author</span> <span class="op">==</span> <span class="nam">self</span><span class="op">.</span><span class="nam">request</span><span class="op">.</span><span class="nam">user</span>&nbsp;</span><input type="checkbox" id="ctxs65" /><span class="r"><label for="ctxs65" class="ctx">1 ctx</label></span><span class="ctxs">1e</span></p>
+    <p class="pln"><span class="n"><a id="t66" href="#t66">66</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t67" href="#t67">67</a></span><span class="t">    <span class="nam">success_url</span> <span class="op">=</span> <span class="nam">reverse_lazy</span><span class="op">(</span><span class="str">"message_list"</span><span class="op">)</span>&nbsp;</span><span class="r"><label for="ctxs67" class="ctx">(empty)</label></span></p>
 </main>
 <footer>
     <div class="content">
@@ -183,7 +167,7 @@
             <a id="nextFileLink" class="nav" href="d_9df13ddeb1e47e46_admin_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.0">coverage.py v7.3.0</a>,
-            created at 2023-08-25 00:29 -0700
+            created at 2023-08-30 22:56 -0700
         </p>
     </div>
 </footer>
