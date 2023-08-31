@@ -1,9 +1,7 @@
 import pytest
 from django.test import RequestFactory
 
-from accounts.models import CustomUser
 from accounts.tests.factories import UserFactory
-from message.models import Message
 from message.tests.factories import MessageFactory
 
 
@@ -13,7 +11,7 @@ def media_storage(settings, tmpdir):
 
 
 @pytest.fixture
-def user() -> CustomUser:
+def user():
     return UserFactory()
 
 
@@ -23,5 +21,5 @@ def request_factory() -> RequestFactory:
 
 
 @pytest.fixture
-def message() -> Message:
+def message():
     return MessageFactory()
