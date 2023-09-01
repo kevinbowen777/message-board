@@ -69,7 +69,7 @@ def test_message_update(rf, message):
     and redirects.
     """
     form_data = {
-        "title": message.body,
+        "title": message.title,
         "status": message.status,
         "body": "This is the new message body",
     }
