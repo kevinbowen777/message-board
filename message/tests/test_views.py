@@ -6,9 +6,9 @@ from pytest_django.asserts import (
 
 from ..models import Message
 from ..views import (
-    MessageCreateView,
     MessageDeleteView,
     MessageUpdateView,
+    message_create,
     message_detail,
     message_list,
 )
@@ -56,7 +56,7 @@ def test_message_create_view(rf, message, admin_user):
     # Add an authenticated user
     request.user = admin_user
     # Use the request to get the response
-    response = MessageCreateView.as_view()(request)
+    response = message_create(request)
     text = Message.published.last()
     # Test that the response is valid
     assert response.status_code == 302
