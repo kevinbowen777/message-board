@@ -1,32 +1,25 @@
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.shortcuts import get_object_or_404, render
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import UserPassesTestMixin
+from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
-from django.views.generic.edit import CreateView, DeleteView, UpdateView
+from django.views.generic.edit import DeleteView, UpdateView
 
+from .forms import MessageCreateForm
 from .models import Message
 
 
-class MessageCreateView(LoginRequiredMixin, CreateView):
-    model = Message
-    template_name = "messages/message_new.html"
-    fields = ["title", "status", "body"]
+@login_required
+def message_create(request):
+    context = {}
 
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        return super().form_valid(form)
+    form = MessageCreateForm(request.POST or None)
+    if form.is_valid():
+        form.instance.author = request.user
+        form.save()
+        return redirect("message_list")
 
-    success_url = reverse_lazy("message_list")
-
-
-class MessageDeleteView(UserPassesTestMixin, DeleteView):
-    model = Message
-    template_name = "messages/message_delete.html"
-
-    def test_func(self):
-        obj = self.get_object()
-        return obj.author == self.request.user
-
-    success_url = reverse_lazy("message_list")
+    context["form"] = form
+    return render(request, "messages/message_new.html", context)
 
 
 def message_detail(request, year, month, day, message):
@@ -44,6 +37,17 @@ def message_detail(request, year, month, day, message):
         "messages/message_detail.html",
         {"message": message},
     )
+
+
+class MessageDeleteView(UserPassesTestMixin, DeleteView):
+    model = Message
+    template_name = "messages/message_delete.html"
+
+    def test_func(self):
+        obj = self.get_object()
+        return obj.author == self.request.user
+
+    success_url = reverse_lazy("message_list")
 
 
 def message_list(request):
