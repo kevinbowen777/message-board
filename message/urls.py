@@ -1,9 +1,10 @@
 from django.urls import path
 
 from .views import (
-    MessageDeleteView,
+    # MessageDeleteView,
     MessageUpdateView,
     message_create,
+    message_delete,
     message_detail,
     message_list,
 )
@@ -23,9 +24,9 @@ urlpatterns = [
         name="message_update",
     ),
     path(
-        # "messages/<int:year>/<int:month>/<int:day>/<slug:message>/",
         "messages/<int:pk>/delete/",
-        MessageDeleteView.as_view(),
+        # "messages/<int:year>/<int:month>/<int:day>/<slug:message>/delete/",
+        message_delete,
         name="message_delete",
     ),
 ]

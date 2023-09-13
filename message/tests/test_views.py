@@ -6,9 +6,10 @@ from pytest_django.asserts import (
 
 from ..models import Message
 from ..views import (
-    MessageDeleteView,
+    # MessageDeleteView,
     MessageUpdateView,
     message_create,
+    message_delete,
     message_detail,
     message_list,
 )
@@ -92,6 +93,7 @@ def test_message_delete(rf, message):
         reverse("message_delete", kwargs={"pk": message.id}),
     )
     request.user = message.author
-    callable_obj = MessageDeleteView.as_view()
+    callable_obj = message_delete
     response = callable_obj(request, pk=message.id)
+    assert request.method == "POST"
     assert response.status_code == 302
