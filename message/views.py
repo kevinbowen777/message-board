@@ -1,28 +1,25 @@
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.mixins import UserPassesTestMixin
 from django.shortcuts import get_object_or_404, redirect, render
-from django.urls import reverse_lazy
-from django.views.generic.edit import UpdateView
 
-from .forms import MessageCreateForm
+from .forms import MessageForm
 from .models import Message
 
 
 @login_required
 def message_create(request):
-    context = {}
-
-    form = MessageCreateForm(request.POST or None)
+    template_name = "messages/message_new.html"
+    form = MessageForm(request.POST or None)
     if form.is_valid():
         form.instance.author = request.user
         form.save()
         return redirect("message_list")
 
-    context["form"] = form
-    return render(request, "messages/message_new.html", context)
+    return render(request, template_name, {"form": form})
 
 
+@login_required
 def message_detail(request, year, month, day, message):
+    template_name = "messages/message_detail.html"
     message = get_object_or_404(
         Message,
         status=Message.Status.PUBLISHED,
@@ -32,51 +29,38 @@ def message_detail(request, year, month, day, message):
         publish__day=day,
     )
 
-    return render(
-        request,
-        "messages/message_detail.html",
-        {"message": message},
-    )
+    return render(request, template_name, {"message": message})
 
 
 @login_required
 def message_delete(request, pk):
-    message = get_object_or_404(
-        Message,
-        id=pk,
-    )
+    template_name = "messages/message_delete.html"
+    message = Message.objects.get(id=pk)
 
-    if message.author == request.user:
-        if request.method == "POST":
-            message.delete()
-            return redirect("message_list")
-    else:
+    if request.method == "POST":
+        message.delete()
         return redirect("message_list")
 
-    return render(
-        request,
-        "messages/message_delete.html",
-        {"message": message},
-    )
+    return render(request, template_name, {"message": message})
 
 
 @login_required
 def message_list(request):
+    template_name = "messages/message_list.html"
     messages = Message.published.all()
-    return render(
-        request,
-        "messages/message_list.html",
-        {"messages": messages},
-    )
+
+    return render(request, template_name, {"messages": messages})
 
 
-class MessageUpdateView(UserPassesTestMixin, UpdateView):
-    model = Message
+@login_required
+def message_update(request, pk):
     template_name = "messages/message_update.html"
-    fields = ["title", "status", "body"]
+    message = Message.objects.get(id=pk)
 
-    def test_func(self):
-        obj = self.get_object()
-        return obj.author == self.request.user
+    form = MessageForm(request.POST or None, instance=message)
+    if form.is_valid():
+        form.instance.author = request.user
+        form.save()
+        return redirect("message_list")
 
-    success_url = reverse_lazy("message_list")
+    return render(request, template_name, {"form": form})

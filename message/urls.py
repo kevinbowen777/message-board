@@ -2,11 +2,12 @@ from django.urls import path
 
 from .views import (
     # MessageDeleteView,
-    MessageUpdateView,
+    # MessageUpdateView,
     message_create,
     message_delete,
     message_detail,
     message_list,
+    message_update,
 )
 
 urlpatterns = [
@@ -20,7 +21,8 @@ urlpatterns = [
     path(
         # "messages/<int:year>/<int:month>/<int:day>/<slug:message>/",
         "messages/<int:pk>/update/",
-        MessageUpdateView.as_view(),
+        # MessageUpdateView.as_view(),
+        message_update,
         name="message_update",
     ),
     path(
