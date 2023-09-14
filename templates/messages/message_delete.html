@@ -11,12 +11,20 @@
       <h2>Delete Message</h2>
       <form action="" method="post">
         {% csrf_token %}
-        <p>Are you sure you want to delete the message:</p>
-        <p>
-          "<em>{{ message.title }}</em>"?
-        </p>
-        <input class="btn btn-danger" type="submit" value="Confirm">
-        <a class="btn btn-info" href="#" onclick="window.history.back()">Cancel</a>
+        {% if request.user == message.author %}
+          <p>Are you sure you want to delete the message:</p>
+          <p>
+            "<em>{{ message.title }}</em>"?
+          </p>
+          <input class="btn btn-danger" type="submit" value="Confirm">
+          <a class="btn btn-info" href="#" onclick="window.history.back()">Cancel</a>
+        {% else %}
+          <p>Unauthorized: Insufficient Permissions</p>
+          <input class="btn btn-success"
+                 type="submit"
+                 href="{% url 'message_list' %}"
+                 value="Return to Message List">
+        {% endif %}
       </form>
     </p>
   </div>
