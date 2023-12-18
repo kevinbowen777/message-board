@@ -8,7 +8,7 @@
 
 </div>
 
-message-board is a simple text posting application built with the Django 4.2.x web framework
+message-board is a simple text posting application built with the Django 5.0.x web framework
 
 ##### Table of Contents
  - [Features](#features)

@@ -6,7 +6,7 @@ users to post to a shared feed list.
 
 This application allows users to log the topics they’re interested in and to make journal entries as they learn about each topic. Once logged in, a user can create new topics, add new entries, and read and edit existing entries.
 
-This web application is built using the Django 4.2.x web application framework and is part of the collection of `Web Framework Projects`_ .
+This web application is built using the Django 5.0.x web application framework and is part of the collection of `Web Framework Projects`_ .
 
 .. _message-board: https://github.com/kevinbowen777/message-board
 .. _Web Framework Projects: https://github.com/kevinbowen777/web-project-index
