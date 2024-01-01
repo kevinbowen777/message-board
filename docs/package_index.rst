@@ -232,5 +232,5 @@ friendly
 TODO: Add link to local coverage reports
 
  .. _message-board: https://github.com/kevinbowen777/message-board/
- .. _pyproject.toml: https://github.com/kevinbowen777/message-board/blob/master/pyproject.toml  
+ .. _pyproject.toml: https://github.com/kevinbowen777/message-board/blob/master/pyproject.toml
  .. _requirements.txt: https://github.com/kevinbowen777/message-board/blob/master/requirements.txt
