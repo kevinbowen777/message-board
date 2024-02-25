@@ -1,4 +1,5 @@
 """Settings for the message_board project."""
+
 from pathlib import Path
 
 # import socket  # Comment out if not using debug_toolbar

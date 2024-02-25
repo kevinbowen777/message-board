@@ -1,4 +1,5 @@
 """Nox sessions - message-board."""
+
 import tempfile
 
 import nox
