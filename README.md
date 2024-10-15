@@ -9,7 +9,7 @@
 
 </div>
 
-message-board is a simple text posting application built with the Django 5.0.x web framework
+message-board is a simple text posting application built with the Django 5.1.x web framework
 
 ##### Table of Contents
  - [Features](#features)
@@ -35,7 +35,7 @@ message-board is a simple text posting application built with the Django 5.0.x w
      - [Debug-toolbar](https://pypi.org/project/django-debug-toolbar/) available. See notes in `config/settings.py` for enabling.
      - Examples of using [Factories](https://pypi.org/project/factory-boy/) & [pytest](https://pypi.org/project/pytest/) fixtures in account app testing
      - [shell_plus](https://django-extensions.readthedocs.io/en/latest/shell_plus.html) with [IPython](https://pypi.org/project/ipython/) via [django-extensions](https://pypi.python.org/pypi/django-extensions/) package
-     - [Nox](https://pypi.org/project/nox/) testing sessions for latest Python 3.10, 3.11, and 3.12
+     - [Nox](https://pypi.org/project/nox/) testing sessions for latest Python 3.10, 3.11, 3.12, 3.13
          - [coverage](https://pypi.org/project/coverage/) (`nox -s coverage`)
          - [Sphinx](https://pypi.org/project/Sphinx/) documentaion generation (`nox -s lint`)
          - linting (`nox -s lint`)
@@ -43,7 +43,7 @@ message-board is a simple text posting application built with the Django 5.0.x w
              - [djlint](https://pypi.org/project/djlint/)
          - [safety](https://pypi.org/project/safety/)(python package vulnerability testing) (`nox -s safety`)
          - [pytest](https://docs.pytest.org/en/latest/) sessions with
-           [pytest-cov](https://pypi.org/project/pytest-cov/) &
+           [pytest-cov](https://pypi.org/project/pytest-cov/)
            [pytest-django](https://pypi.org/project/pytest-django/) (`coverage run -m pytest`)
   - `run` command menu
 
