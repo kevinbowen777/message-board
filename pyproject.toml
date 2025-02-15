@@ -44,13 +44,14 @@ classifiers = [
     "Topic :: Internet :: WWW/HTTP",
 ]
 
-package-mode = false
-
 [project.urls]
 Homepage = "https://github.com/kevinbowen777/message-board.git"
 Repository = "https://github.com/kevinbowen777/message-board.git"
 Changelog = "https://github.com/kevinbowen777/message-board/NEWS"
 Documentation = "file:///docs/_build/index.html"
+
+[tool.poetry]
+package-mode = false
 
 [tool.poetry.group.dev.dependencies]
 django-debug-toolbar = ">=5.0.0, <6.0.0"
