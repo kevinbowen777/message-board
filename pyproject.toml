@@ -1,6 +1,6 @@
 [project]
 name = "message-board"
-version = "0.3.2"
+version = "0.3.3"
 description = "A simple message board built with Django web framework"
 requires-python = ">=3.11.0, <3.14.0"
 dependencies = [
