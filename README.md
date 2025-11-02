@@ -36,7 +36,7 @@ message-board is a simple text posting application built with the Django 5.2.x w
      - Examples of using [Factories](https://pypi.org/project/factory-boy/) & [pytest](https://pypi.org/project/pytest/) fixtures in account app testing
      - [shell_plus](https://django-extensions.readthedocs.io/en/latest/shell_plus.html) via [django-extensions](https://pypi.python.org/pypi/django-extensions/) package
      - [Pre-commit](https://github.com/pre-commit/pre-commit)
-     - [Nox](https://pypi.org/project/nox/) testing sessions for latest Python 3.11, 3.12, 3.13
+     - [Nox](https://pypi.org/project/nox/) testing sessions for latest Python 3.11, 3.12, 3.13, 3.14
          - [Sphinx](https://pypi.org/project/Sphinx/) documentation generation (`nox -s docs`)
          - Generate [Coverage](https://pypi.org/project/coverage/) reports in `htmlcov` directory (`nox -s coverage`)
          - linting (`nox -s lint`)
@@ -92,11 +92,11 @@ message-board is a simple text posting application built with the Django 5.2.x w
  - `docker compose exec web python manage.py test`
  - `coverage run -m pytest`
  - Nox (includes sessions for coverage, docs, lint, pyright, audit, tests)
-     - testing supported for Python 3.11, 3.12, 3.13
+     - testing supported for Python 3.11, 3.12, 3.13, 3.14
      - e.g. `nox`, `nox -rs lint-3.11`, `nox -s tests`
        - `nox`
        - `nox -s coverage-3.12`
-       - `nox -s docs-3.11`
+       - `nox -s docs-3.14`
        - `nox -rs lint-3.13` (Use the 'r' flag to reuse existing session)
        - `nox -s pyright-3.11`
        - `nox -s audit` (will run tests against all Python versions)
