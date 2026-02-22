@@ -74,7 +74,7 @@
             <a id="nextFileLink" class="nav" href="z_2f246dc774b95f9e_test_views_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.4">coverage.py v7.13.4</a>,
-            created at 2026-02-12 07:54 -0800
+            created at 2026-02-22 12:33 -0800
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -107,7 +107,7 @@
     <p class="run"><span class="n"><a id="t16" href="#t16">16</a></span><span class="t"><span class="key">def</span> <span class="nam">test_get_absolute_url</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"><label for="ctxs16" class="ctx">(empty)</label></span></p>
     <p class="run"><span class="n"><a id="t17" href="#t17">17</a></span><span class="t">    <span class="nam">message</span> <span class="op">=</span> <span class="nam">MessageFactory</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><input type="checkbox" id="ctxs17"><span class="r"><label for="ctxs17" class="ctx">1 ctx</label></span><span class="ctxs">1c</span></p>
     <p class="run"><span class="n"><a id="t18" href="#t18">18</a></span><span class="t">    <span class="nam">slug_time</span> <span class="op">=</span> <span class="nam">dt</span><span class="op">.</span><span class="nam">now</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">strftime</span><span class="op">(</span><span class="str">"%Y/%-m/%-d"</span><span class="op">)</span>&nbsp;</span><input type="checkbox" id="ctxs18"><span class="r"><label for="ctxs18" class="ctx">1 ctx</label></span><span class="ctxs">1c</span></p>
-    <p class="run"><span class="n"><a id="t19" href="#t19">19</a></span><span class="t">    <span class="key">assert</span> <span class="nam">message</span><span class="op">.</span><span class="nam">get_absolute_url</span><span class="op">(</span><span class="op">)</span> <span class="op">==</span> <span class="fst">f"</span><span class="fst">/messages/</span><span class="op">{</span><span class="nam">slug_time</span><span class="op">}</span><span class="fst">/</span><span class="op">{</span><span class="nam">message</span><span class="op">.</span><span class="nam">slug</span><span class="op">}</span><span class="fst">/</span><span class="fst">"</span>&nbsp;</span><input type="checkbox" id="ctxs19"><span class="r"><label for="ctxs19" class="ctx">1 ctx</label></span><span class="ctxs">1c</span></p>
+    <p class="run"><span class="n"><a id="t19" href="#t19">19</a></span><span class="t">    <span class="key">assert</span> <span class="nam">message</span><span class="op">.</span><span class="nam">get_absolute_url</span><span class="op">(</span><span class="op">)</span> <span class="op">==</span> <span class="str">f"/messages/{slug_time}/{message.slug}/"</span>&nbsp;</span><input type="checkbox" id="ctxs19"><span class="r"><label for="ctxs19" class="ctx">1 ctx</label></span><span class="ctxs">1c</span></p>
 </main>
 <footer>
     <div class="content">
@@ -117,7 +117,7 @@
             <a class="nav" href="z_2f246dc774b95f9e_test_views_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.4">coverage.py v7.13.4</a>,
-            created at 2026-02-12 07:54 -0800
+            created at 2026-02-22 12:33 -0800
         </p>
     </div>
 </footer>
