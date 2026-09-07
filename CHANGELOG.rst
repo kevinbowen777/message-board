@@ -27,6 +27,42 @@ with advance notice in the **Deprecations** section of releases.
 
 .. towncrier release notes start
 
+message-board 0.3.6 (2026-09-07)
+================================
+
+Contributor-facing changes
+--------------------------
+
+-  (`#616 <https://github.com/kevinbowen777/message-board/616>`_): Update django-allauth to 65.19.1
+
+-  (`#616 <https://github.com/kevinbowen777/message-board/616>`_): Update gunicorn to 26.1.0
+
+-  (`#616 <https://github.com/kevinbowen777/message-board/616>`_): Update django-debug-toolbar to 7.1.1
+
+-  (`#616 <https://github.com/kevinbowen777/message-board/616>`_),  (`#636 <https://github.com/kevinbowen777/message-board/636>`_): Update nox to 2026.8.17
+
+-  (`#628 <https://github.com/kevinbowen777/message-board/628>`_): Initial zizmor remediation. Pin GitHub actions to hashes.
+
+-  (`#636 <https://github.com/kevinbowen777/message-board/636>`_): Update psycopg to 3.3.5
+
+-  (`#636 <https://github.com/kevinbowen777/message-board/636>`_): Update django-debug-toolbar to 8.0.0
+
+-  (`#636 <https://github.com/kevinbowen777/message-board/636>`_): Update djlint to 1.45.2
+
+-  (`#636 <https://github.com/kevinbowen777/message-board/636>`_): Update django-allauth to 65.19.2
+
+-  (`#636 <https://github.com/kevinbowen777/message-board/636>`_): Upgrade environs to 15.2.0
+
+-  (`#636 <https://github.com/kevinbowen777/message-board/636>`_): Upgrade gunicorn to 26.2.0
+
+-  (`#636 <https://github.com/kevinbowen777/message-board/636>`_): Update towncrier to 26.9.0
+
+
+New features
+------------
+
+-  (`#636 <https://github.com/kevinbowen777/message-board/636>`_): Upgrade Django to 6.1.1
+
 message-board 0.3.5 (2026-08-18)
 ================================
 
