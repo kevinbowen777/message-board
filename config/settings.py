@@ -92,7 +92,7 @@ DATABASES = {
         "USER": env.str("POSTGRES_USER", default="fakeuser"),
         "PASSWORD": env.str("POSTGRES_PASSWORD", "password"),
         "HOST": env.str("POSTGRES_HOST", "db"),
-        "PORT": env.int("POSTGRES_PORT", "5432"),
+        "PORT": env.int("POSTGRES_PORT", 5432),
     }
 }
 
@@ -120,7 +120,7 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 
 
-USE_TZ = True
+USE_TZ = False
 
 # Static Assets
 STATIC_URL = "/static/"
