@@ -18,6 +18,7 @@ message-board is a simple text posting application built with the Django 6.x web
 - [Testing](#testing)
 - [Application Demo](#application-demo)
 - [Screenshots](#screenshots)
+- [Contributions](#contributions)
 - [Reporting Bugs](#reporting-bugs)
 
 ---
@@ -148,6 +149,13 @@ TBD
 ### Email Address management
 
 ![Email Address management](images/message-board_email-addresses.png)
+
+---
+
+### Contributions
+
+You are free to fork this repository and modify as you see fit. See
+[CONTRIBUTING](https://github.com/kevinbowen777/message-board/CONTRIBUTING.md) for details on reporting issues, etc.
 
 ---
 
