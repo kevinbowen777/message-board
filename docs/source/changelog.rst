@@ -27,6 +27,38 @@ with advance notice in the **Deprecations** section of releases.
 
 .. towncrier release notes start
 
+message-board 0.3.9 (2026-10-30)
+================================
+
+Security updated
+----------------
+
+-  (`#647 <https://github.com/kevinbowen777/message-board/647>`_): Update certifi to 2026.10.23
+
+-  (`#647 <https://github.com/kevinbowen777/message-board/647>`_): Update .python-version with 3.14.9, 3.13.17, 3.12.16
+
+-  (`#647 <https://github.com/kevinbowen777/message-board/647>`_): Update pillow to 13.0.0
+
+-  (`#647 <https://github.com/kevinbowen777/message-board/647>`_): Update django-allauth to 65.20.1
+
+-  (`#647 <https://github.com/kevinbowen777/message-board/647>`_): Update pip to 26.2.2
+
+
+Improved documentation
+----------------------
+
+-  (`#647 <https://github.com/kevinbowen777/message-board/647>`_): Remove legacy license classifier
+
+
+Contributor-facing changes
+--------------------------
+
+-  (`#647 <https://github.com/kevinbowen777/message-board/647>`_): Update nox to 2026.10.20
+
+-  (`#647 <https://github.com/kevinbowen777/message-board/647>`_): Update ruff rules & fix reported errors
+
+-  (`#647 <https://github.com/kevinbowen777/message-board/647>`_): Update djlint to 1.47.1
+
 message-board 0.3.8 (2026-10-13)
 ================================
 
