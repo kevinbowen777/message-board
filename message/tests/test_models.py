@@ -9,7 +9,6 @@ pytestmark = pytest.mark.django_db
 
 def test_message___str__():
     message = MessageFactory()
-    assert message.__str__() == message.title
     assert str(message) == message.title
 
 

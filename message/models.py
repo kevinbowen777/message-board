@@ -1,3 +1,5 @@
+from typing import ClassVar
+
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.template.defaultfilters import slugify
@@ -48,8 +50,8 @@ class Message(models.Model):
     published = PublishedManager()
 
     class Meta:
-        ordering = ["-publish"]
-        indexes = [
+        ordering: ClassVar[list[str]] = ["-publish"]
+        indexes: ClassVar[list] = [
             models.Index(fields=["-publish"]),
         ]
 
