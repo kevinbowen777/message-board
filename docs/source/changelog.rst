@@ -27,6 +27,32 @@ with advance notice in the **Deprecations** section of releases.
 
 .. towncrier release notes start
 
+message-board 0.3.10 (2026-11-11)
+=================================
+
+Security updated
+----------------
+
+-  (`#649 <https://github.com/kevinbowen777/message-board/649>`_): Update django-allauth to 65.22.0
+
+-  (`#649 <https://github.com/kevinbowen777/message-board/649>`_): Update pip to 26.3
+
+-  (`#649 <https://github.com/kevinbowen777/message-board/649>`_): Update Django to 6.1.3
+
+-  (`#649 <https://github.com/kevinbowen777/message-board/649>`_): Update psycopg to 3.3.8
+
+
+Contributor-facing changes
+--------------------------
+
+-  (`#649 <https://github.com/kevinbowen777/message-board/649>`_): Update coverage to 7.17.2
+
+-  (`#649 <https://github.com/kevinbowen777/message-board/649>`_): Update djlint to 1.50.0
+
+-  (`#649 <https://github.com/kevinbowen777/message-board/649>`_): Update myst-parser to 5.2.0
+
+-  (`#649 <https://github.com/kevinbowen777/message-board/649>`_): Update gunicorn to 27.0.0
+
 message-board 0.3.9 (2026-10-30)
 ================================
 
